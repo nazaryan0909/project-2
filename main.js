@@ -34,13 +34,29 @@
 
 // գ) այն տարրերի քանակը, որոնք փոքր են իրենց ձախ և աջ հարևանների կիսագումարից,  
 
-function kisagumar(arr){
-let count = 0;
-for(let i = 1; i < arr.length-1; i++){
-    if(arr[i] < (arr[i + 1] + arr[i - 1]) / 2){
-        count++
+// function kisagumar(arr){
+// let count = 0;
+// for(let i = 1; i < arr.length-1; i++){
+//     if(arr[i] < (arr[i + 1] + arr[i - 1]) / 2){
+//         count++
+//     }
+//     return count
+// }
+// }
+// console.log(kisagumar([2, 1, 6, 4]))
+
+// դ) մեծագույն տարրը և նրա կարգահամարը,  
+function biggest(arr){
+    let max = arr[0];
+    let index = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > max){
+            max = arr[i]
+            index = i
+        }
+       
     }
-    return count
+    return `max is ${max} index is ${index}` 
 }
-}
-console.log(kisagumar([2, 1, 6, 4]))
+console.log(biggest([2,8,9,5,3]))
+
