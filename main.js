@@ -46,17 +46,37 @@
 // console.log(kisagumar([2, 1, 6, 4]))
 
 // դ) մեծագույն տարրը և նրա կարգահամարը,  
-function biggest(arr){
+// function biggest(arr){
+//     let max = arr[0];
+//     let index = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] > max){
+//             max = arr[i]
+//             index = i
+//         }
+       
+//     }
+//     return `max is ${max} index is ${index}` 
+// }
+// console.log(biggest([2,8,9,5,3]))
+
+// ե) մեծագույն և փոքրագույն տարրերի տարբերությունը,  
+
+function tarb(arr){
     let max = arr[0];
-    let index = 0;
     for(let i = 0; i < arr.length; i++){
         if(arr[i] > max){
             max = arr[i]
-            index = i
         }
-       
     }
-    return `max is ${max} index is ${index}` 
+    let min = arr[0];
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i]
+        }
+    }
+    let tarberutyun = max - min
+    return tarberutyun
 }
-console.log(biggest([2,8,9,5,3]))
+console.log(tarb([2, 7, 1, 8, 3]))
 
