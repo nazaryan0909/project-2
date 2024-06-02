@@ -10,13 +10,24 @@
 
 // ա) այն տարրերի քանակը, որոնք փոքր են իրենց կարգահամարի քառակուսուց, 
 
-function SquareOfRank(arr){
-    let count = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < i * i) {
-            count++;
-        }
+// function SquareOfRank(arr){
+//     let count = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < i * i) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(SquareOfRank([-2, 5, 6, 1, 7]))
+
+//  բ) բոլոր տարրերի միջին թվաբանականի և տարրերի տարբերությունները,  
+
+function Mijin(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum = sum + arr[i]
     }
-    return count;
+    return sum / arr.length
 }
-console.log(SquareOfRank([-2, 5, 6, 1, 7]))
+console.log(Mijin([2, 1, 4, 3]))
