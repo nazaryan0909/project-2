@@ -23,11 +23,24 @@
 
 //  բ) բոլոր տարրերի միջին թվաբանականի և տարրերի տարբերությունները,  
 
-function Mijin(arr){
-    let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-        sum = sum + arr[i]
+// function Mijin(arr){
+//     let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         sum = sum + arr[i]
+//     }
+//     return sum / arr.length
+// }
+// console.log(Mijin([2, 1, 4, 3]))
+
+// գ) այն տարրերի քանակը, որոնք փոքր են իրենց ձախ և աջ հարևանների կիսագումարից,  
+
+function kisagumar(arr){
+let count = 0;
+for(let i = 1; i < arr.length-1; i++){
+    if(arr[i] < (arr[i + 1] + arr[i - 1]) / 2){
+        count++
     }
-    return sum / arr.length
+    return count
 }
-console.log(Mijin([2, 1, 4, 3]))
+}
+console.log(kisagumar([2, 1, 6, 4]))
