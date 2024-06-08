@@ -132,10 +132,31 @@
 
 // է) մեծագույն և մեծությամբ երկրորդ տարրերը,  
 
-let arr = [5,8,1,2,9,7].sort((a, b) => a - b)
-console.log(arr)
-let max = arr[arr.length-1];
-let max2 = arr[arr.length-2];
+// let arr = [5,8,1,2,9,7].sort((a, b) => a - b)
+// console.log(arr)
+// let max = arr[arr.length-1];
+// let max2 = arr[arr.length-2];
 
-console.log(max)
-console.log(max2)
+// console.log(max)
+// console.log(max2)
+
+// ը) դրական տարրերից փոքրագույնի արժեքը (եթե դրական տարր չկա, արտածել համապատասխան հաղորդագրություն):
+ let arr = [-4,-2,-8,-5,-1]
+ let arr1 = [];
+ for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 0){
+        arr1.push(arr[i])
+    }
+ }
+
+
+ 
+ if(arr1.length == 0 ){
+    console.log("drakan element chka")
+ }
+ else{
+    arr1.sort((a, b) => a - b)
+ console.log(arr1)
+ let min = arr1[0]
+ console.log(min)
+ }
